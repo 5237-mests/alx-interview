@@ -1,7 +1,7 @@
 def pascal_triangle(n):
     bigarray = []
     tmp = [1]
-    if (n == 0):
+    if (n <= 0):
         return bigarray
     if (n == 1):
         bigarray.append([1])
