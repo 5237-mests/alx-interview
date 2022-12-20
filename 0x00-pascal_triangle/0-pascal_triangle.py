@@ -1,19 +1,13 @@
 def pascal_triangle(n):
     bigarray = []
-    tmp = [1]
     if (n <= 0):
         bigarray.append([])
-    if (n == 1):
-        bigarray.append([1])
-    while n - 1 > 0:
-        ntmp = []
-        ntmp.insert(0, 1)
-        ntmp.insert(len(tmp), 1)
-        for i in range(1, len(tmp)):
-            ntmp.insert(i, tmp[i-1] + tmp[i])
-        bigarray.append(ntmp)
-        tmp = ntmp.copy()
-        if (n - 1 == 1):
-            bigarray.insert(0, [1])
-        n -= 1
+    for i in range(n):
+        tmp = []
+        for j in range(i + 1):
+            if j == 0 or j == i:
+                tmp.append(1)
+            else:
+                tmp.append(bigarray[i - 1][j - 1] + bigarray[i - 1][j])
+        bigarray.append(tmp)
     return bigarray
