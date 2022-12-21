@@ -1,4 +1,11 @@
+#!/usr/bin/python3
+"""
+Pascal Triangle algorithm
+"""
+
+
 def pascal_triangle(n):
+    """A method generating pascal triangle."""
     bigarray = []
     if (n <= 0):
         bigarray.append([])
