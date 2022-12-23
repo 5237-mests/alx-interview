@@ -8,7 +8,7 @@ def pascal_triangle(n):
     """A method generating pascal triangle."""
     bigarray = []
     if (n <= 0):
-        bigarray.append([])
+        return []
     else:
         for i in range(n):
             tmp = []

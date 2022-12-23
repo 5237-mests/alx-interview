@@ -1,4 +1,4 @@
-## !/usr/bin/python3 ##this shebang is not working on windows
+#!/usr/bin/python3 ##this shebang is not working on windows
 """
 0-main
 """
@@ -13,4 +13,4 @@ def print_triangle(triangle):
 
 
 if __name__ == "__main__":
-    print_triangle(pascal_triangle(5))
+    print_triangle(pascal_triangle(0))
