@@ -3,7 +3,9 @@
 """
 
 
-def minOperations(n: int) -> int:
+def minOperations(n) -> int:
+    if not isinstance(n, int):
+        return 0
     number_of_char_H = 1
     number_of_clipboard = 1
     number_of_operations = 0
