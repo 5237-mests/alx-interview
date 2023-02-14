@@ -4,6 +4,17 @@
 
 def rotate_2d_matrix(matrix):
     """rotate matrix """
+    if type(matrix) != list:
+        return
+    if len(matrix) <= 0:
+        return
+    if not all(map(lambda x: type(x) == list, matrix)):
+        return
+    rows = len(matrix)
+    column = len(matrix[0])
+    if not all(map(lambda x: len(x) == column, matrix)):
+        return
+
     deepcopied_matrix = matrix.copy()
     for k in range(len(deepcopied_matrix)):
         deepcopied_matrix[k] = deepcopied_matrix[k].copy()
