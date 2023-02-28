@@ -5,6 +5,8 @@
 
 def island_perimeter(grid):
     """returns perimeter"""
+    if type(grid) != list:
+        return 0
     row = len(grid)
     col = len(grid[0])
     perimeter = 0
@@ -13,16 +15,16 @@ def island_perimeter(grid):
         for j in range(col):
             if i == 0:
                 if grid[i][j] != 0:
-                    return 1
+                    return 0
             if j == 0:
                 if grid[i][j] != 0:
-                    return 2
+                    return 0
             if i == row - 1:
                 if grid[i][j] != 0:
-                    return 3
+                    return 0
             if j == col - 1:
                 if grid[i][j] != 0:
-                    return 4
+                    return 0
             if grid[i][j] == 1:
                 perimeter += 4
                 if grid[i][j + 1] == 1:
